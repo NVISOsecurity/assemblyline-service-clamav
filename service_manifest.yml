@@ -1,0 +1,29 @@
+name: ClamAV
+version: $SERVICE_TAG
+description: Scan the file with ClamAV
+
+accepts: .*
+rejects: empty|metadata/.*
+
+stage: CORE
+category: Static Analysis
+
+file_required: true
+timeout: 120
+disable_cache: false
+
+enabled: true
+is_external: false
+licence_count: 0
+
+heuristics:
+  - heur_id: 1
+    name: ClamAV FOUND
+    score: 1000
+    filetype: .*
+    description: ClamAV found that the scanned file is malicious
+
+docker_config:
+  image: x1mus/assemblyline-service-clamav:$SERVICE_TAG
+  cpu_cores: 1
+  ram_mb: 2048
