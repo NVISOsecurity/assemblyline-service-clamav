@@ -17,7 +17,7 @@ class ClamAV(ServiceBase):
 		result = Result()
 		file_path = request.file_path
 
-		p1 = subprocess.Popen("clamscan " + file_path, shell=True, stdout=subprocess.PIPE)
+		p1 = subprocess.Popen("clamscan -a -z --detect-pua --alert-macros " + file_path, shell=True, stdout=subprocess.PIPE)
 		p1.wait()
 		stdout = p1.communicate()[0].decode("utf-8")
 
