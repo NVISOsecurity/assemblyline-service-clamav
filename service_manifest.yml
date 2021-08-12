@@ -24,6 +24,6 @@ heuristics:
     description: ClamAV found that the scanned file is malicious
 
 docker_config:
-  image: x1mus/assemblyline-service-clamav:$SERVICE_TAG
+  image: sorakurai/assemblyline-service-clamav:$SERVICE_TAG
   cpu_cores: 1
   ram_mb: 2048
