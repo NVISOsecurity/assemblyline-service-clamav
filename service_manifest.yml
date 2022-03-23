@@ -1,5 +1,5 @@
 name: ClamAV
-version: $SERVICE_TAG
+version: 4.2.0.stable1
 description: Scan the file with ClamAV
 
 accepts: .*
@@ -24,6 +24,6 @@ heuristics:
     description: ClamAV found that the scanned file is malicious
 
 docker_config:
-  image: ghcr.io/nvisosecurity/assemblyline-service-clamav:$SERVICE_TAG
+  image: ghcr.io/nvisosecurity/assemblyline-service-clamav:main
   cpu_cores: 1
   ram_mb: 2048
