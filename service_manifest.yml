@@ -1,5 +1,5 @@
 name: ClamAV
-version: 4.2.0.stable1
+version: 4.3.0.stable1
 description: Scan the file with ClamAV
 
 accepts: .*
